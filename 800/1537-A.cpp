@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+#define endl '\n'
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<ll> data(n);
+        ll sum = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> data[i];
+            sum += data[i];
+        }
+
+        if (sum == n) {
+            cout << 0 << endl; 
+        } else if (sum < n) {
+            cout << 1 << endl;
+        } else { 
+            cout << sum - n << endl;
+        }
+    }
+
+    return 0;
+}
